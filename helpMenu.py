@@ -28,7 +28,23 @@ class Window(QWidget):
     def aboutButton(self):
         aboutMessageBox = QMessageBox(self)
         aboutMessageBox.setWindowTitle("About this program")
-        aboutMessageBox.setText("<h5>About content</h5>")
+        aboutMessageBox.setText("<p><h4>This program is developed by engineers from EEE231 Group A. "
+                                "The program is written in Python and most of the UI are written using Pyside.<br /> "
+                                "</h4></p> "
+                                "<p><h4>Acknowledgements to the programmers who contributed to this process (in no "
+                                "particular order). </h4>"
+                                "Joshua Adewoye <br />"
+                                "Edward Atkinson <br />"
+                                "Yang Cen <br />"
+                                "Zhengyi Huang <br />"
+                                "Iyad Khairallah <br />"
+                                "Yufei Liu <br />"
+                                "Chi Hei Tan <br />"
+                                "Brian Wu <br />"
+                                "Qidong Ye <br /></p>"
+                                "<p><h4>Special thanks to (in no particular order) </h4>"
+                                "Dr Peter Rockett<br />"
+                                "Dr Charith Abhayaratne</p>")
         aboutMessageBox.setIcon(QMessageBox.Information)
         aboutMessageBox.open()
 
