@@ -21,7 +21,7 @@ class QmouseEvent:
     pass
 
 
-class Window(QWidget):
+class rbWindow(QWidget):
     def __init__(self):
         super().__init__()
 
@@ -34,13 +34,12 @@ class Window(QWidget):
         self.rubberBand = QRubberBand(QRubberBand.Rectangle, self)
         pass
 
-
     def mousePressEvent(self, event):
         # QMouseEvent
 
         # 2.size: mouseClickPosition
         self.origin_pos = event.pos()
-        self.rubberBand.setGeometry(QRect(self.origin_pos,QSize()))
+        self.rubberBand.setGeometry(QRect(self.origin_pos, QSize()))
         # 3.show RubberBand
         self.rubberBand.show()
         pass
@@ -63,6 +62,6 @@ class Window(QWidget):
 
 if __name__ == "__main__":
     application = QApplication(sys.argv)
-    window = Window()
+    window = rbWindow()
     window.show()
     exit(application.exec_())

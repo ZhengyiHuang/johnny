@@ -27,6 +27,7 @@ class Window(QWidget):
 
     def aboutButton(self):
         aboutMessageBox = QMessageBox(self)
+        aboutMessageBox.setWindowModality(Qt.NonModal)
         aboutMessageBox.setWindowTitle("About this program")
         aboutMessageBox.setText("<h5>About content</h5>")
         aboutMessageBox.setIcon(QMessageBox.Information)
